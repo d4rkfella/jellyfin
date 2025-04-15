@@ -23,7 +23,8 @@ accounts:
   run-as: nonroot:nonroot
 environment:
   MALLOC_TRIM_THRESHOLD_: 131072
-  HEALTHCHECK_URL: http://localhost:8096/health
+  DOTNET_EnableDiagnostics: 0
+  DOTNET_RUNNING_IN_CONTAINER: true
   XDG_CACHE_HOME: /cache
   JELLYFIN_CACHE_DIR: /cache
   JELLYFIN_CONFIG_DIR: /config/config
